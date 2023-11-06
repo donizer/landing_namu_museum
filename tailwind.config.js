@@ -19,7 +19,7 @@ export default {
         'lecture-image':
           'url(./src/assets/09017e62cd8b96fa78cfd0b9cad36c20.jpg)',
         'subscribe-image':
-          'url(./src/assets/f455f3b8289d519bbaeb4fa35a9a0c53.jpg)',
+          'url(./public/images/f455f3b8289d519bbaeb4fa35a9a0c53.jpg)',
       },
       backgroundSize: {
         '50%': '50%',
