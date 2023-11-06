@@ -4,7 +4,7 @@ import { appContext } from './Contexts/AppContext';
 import { Header } from './components/Header';
 import { GridContainer } from './components/GridContainer';
 import { ModalMenu } from './components/ModalMenu';
-import { Gallery } from './components/Gallery';
+import { Gallery } from './components/GalleryGrid';
 import { Subscribe } from './components/Subscribe';
 
 import arrowUpIcon from './assets/carbon_arrow-up.svg';

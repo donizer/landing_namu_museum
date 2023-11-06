@@ -19,21 +19,21 @@ export const Header = () => {
         />
       </button>
 
-      <div className="absolute left-0 top-[522px] hidden -rotate-90 items-center gap-5 xl:flex">
+      <div className="absolute left-0 top-[522px] hidden -rotate-90 select-none items-center gap-5 xl:flex">
         <div className="h-px w-[70px] bg-dark-green" />
         <p className="font-IBMPlexSans text-base font-bold text-dark-green">
           Події
         </p>
       </div>
 
-      <div className="absolute left-0 right-0 top-2 text-center font-montserrat text-3xl font-bold uppercase leading-[30px] md:left-[25%] md:text-4xl xl:left-0">
+      <div className="absolute left-0 right-0 top-2 select-none text-center font-montserrat text-3xl font-bold uppercase leading-[30px] md:left-[25%] md:text-4xl xl:left-0">
         na
         <br />
         mu
       </div>
 
       <img
-        className="col-span-full w-full md:col-start-5 xl:col-start-7"
+        className="pointer-events-none col-span-full w-full select-none md:col-start-5 xl:col-start-7"
         src={museum}
         alt=""
       />

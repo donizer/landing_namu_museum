@@ -44,7 +44,7 @@ export const GalleryItem: React.FC<Props> = ({
     <>
       <div className="col-start-2 col-end-4 md:col-end-8 xl:col-end-9">
         <img
-          className="h-[210px] w-full object-cover md:h-[520px]"
+          className="pointer-events-none h-[210px] w-full object-cover md:h-[520px]"
           src={imgUrl}
           alt={title}
         />

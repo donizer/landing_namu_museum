@@ -33,20 +33,20 @@ export const Gallery = () => {
       ) : (
         <div className="col-start-2 col-end-[14] grid grid-cols-12 gap-[30px]">
           <img
-            className="col-span-4 h-full scale-x-[-1] object-cover"
+            className="pointer-events-none col-span-4 h-full scale-x-[-1] select-none object-cover"
             src={img3}
-            alt=""
           />
-          <img className="col-span-8 w-full scale-x-[-1]" src={img2} alt="" />
           <img
-            className="row-start col-span-8 h-[360px] w-full scale-x-[-1] object-cover"
+            className="pointer-events-none col-span-8 w-full scale-x-[-1] select-none"
+            src={img2}
+          />
+          <img
+            className="row-start pointer-events-none col-span-8 h-[360px] w-full scale-x-[-1] select-none object-cover"
             src={img1}
-            alt=""
           />
           <img
-            className="col-span-4 h-full scale-x-[-1] object-cover"
+            className="pointer-events-none col-span-4 h-full scale-x-[-1] select-none object-cover"
             src={img4}
-            alt=""
           />
         </div>
       )}

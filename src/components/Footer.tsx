@@ -8,7 +8,7 @@ export const Footer = () => {
     <>
       <GridContainer>
         <div className="col-start-2 col-end-4 row-start-1 mt-8 justify-between  md:col-end-3 md:row-end-4">
-          <div className="font-montserrat text-4xl font-bold uppercase leading-[100%]">
+          <div className="select-none font-montserrat text-4xl font-bold uppercase leading-[100%]">
             na
             <br />
             mu

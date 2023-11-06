@@ -7,7 +7,7 @@ export const PromoItem: React.FC<Props> = ({ imgUrl }) => {
     <>
       <div className="col-span-full h-[293px] md:col-start-2 md:col-end-8 md:h-[510px] xl:col-span-full xl:h-[652px] ">
         <img
-          className="h-[210px] w-full object-cover md:h-[390px] xl:h-[550px]"
+          className="pointer-events-none h-[210px] w-full object-cover md:h-[390px] xl:h-[550px]"
           src={imgUrl}
           alt=""
         />
