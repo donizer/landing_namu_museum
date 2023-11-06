@@ -10,7 +10,7 @@ export const Header = () => {
   const { toggleMenu } = useContext(appContext);
 
   return (
-    <GridContainer id="header">
+    <GridContainer>
       <button onClick={toggleMenu}>
         <img
           className="absolute left-6 top-7 z-10 md:left-8 md:top-9"
