@@ -7,32 +7,41 @@ export const Footer = () => {
   return (
     <>
       <GridContainer>
-        <div className="col-start-2 col-end-4 row-start-1 mt-8 justify-between  md:col-end-3 md:row-end-4">
+        <div className="col-start-2 col-end-3  row-start-1 mb-8 justify-between md:col-end-3 md:row-end-4">
           <div className="select-none font-montserrat text-4xl font-bold uppercase leading-[100%]">
-            na
-            <br />
-            mu
+            <a href="#home">
+              na
+              <br />
+              mu
+            </a>
           </div>
         </div>
 
-        <div className="col-start-3 row-start-1 mt-8 flex justify-end gap-5 self-center md:col-start-2 md:row-start-3 md:justify-start md:gap-7">
-          <a href="#">
-            <img src={facebookIco} alt="facebook" />
-          </a>
-          <a href="#">
-            <img src={instagramIco} alt="instagram" />
-          </a>
+        <div className="col-start-3 row-start-1 mb-8 flex items-center justify-end gap-5 md:col-start-2 md:row-start-2 md:mt-[90px] md:items-start md:justify-start md:gap-7">
+          <div>
+            <a href="https://www.facebook.com/namu.museum" target="_blank">
+              <img src={facebookIco} alt="facebook" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/namu.museum/" target="_blank">
+              <img src={instagramIco} alt="instagram" />
+            </a>
+          </div>
         </div>
 
-        <p className="col-start-2 row-start-2 mb-5 mt-10 md:col-span-2 md:col-start-3">
+        <p className="col-start-2 mb-5 self-center md:col-span-2 md:col-start-3 xl:col-start-4">
           Графік роботи
         </p>
 
-        <p className="col-start-3 row-start-2 mt-10 md:col-span-2 md:col-start-5">
+        <p
+          id="contacts"
+          className="col-start-3 mb-5 self-center md:col-span-2 md:col-start-5 xl:col-start-6"
+        >
           Контакти:
         </p>
 
-        <div className="col-start-2 row-start-3 font-IBMPlexSans text-[14px] leading-[150%] md:col-span-2 md:col-start-3 ">
+        <div className="col-start-2 row-start-3 font-IBMPlexSans text-[14px] leading-[150%] md:col-span-2 md:col-start-3 md:row-start-2 xl:col-start-4">
           <p>
             <span className="font-semibold">12:00 — 20:00</span> середа
           </p>
@@ -50,35 +59,42 @@ export const Footer = () => {
           </p>
           <br />
           <p>
-            Вихідні понеділок, вівторок <br /> Каса припиняє роботу за 1 годину
+            <span className="font-semibold">Вихідні:</span> понеділок, вівторок
+            <br />
+            Каса припиняє роботу за 1 годину
+            <br />
             до закриття музею
           </p>
         </div>
 
-        <div className="col-start-3 row-start-3 font-IBMPlexSans text-[14px] leading-[150%] md:col-span-2 md:col-start-5">
-          вул. М. Грушевського, 6; Київ, 01001 <br /> тел. +38 (044) 278-13-57
-          <br /> факс +38 (044) 278-74-54 <br />
+        <div className="col-start-3 row-start-3 font-IBMPlexSans text-[14px] leading-[150%] md:col-span-2 md:col-start-5 md:row-start-2 xl:col-start-6">
+          вул. М. Грушевського, 6; Київ, 01001
+          <br />
+          тел. +38 (044) <br className="md:hidden" /> 278-13-57
+          <br />
+          факс +38 (044) <br className="md:hidden xl:inline" /> 278-74-54
+          <br />
           e-mail: info@namu.kiev.ua
         </div>
 
-        <hr className="col-start-2 col-end-4 row-start-4 my-[40px] border-[#1a5a4c80] md:col-start-3 md:col-end-7 xl:hidden" />
+        <hr className="col-start-2 col-end-4 row-start-4 my-[40px] border-[#1a5a4c80] md:col-start-3 md:col-end-7 md:my-[64px] xl:hidden" />
 
-        <div className="relative right-[15px] col-start-8 row-span-4 hidden h-[260px] w-px self-center border-x-[0.5px] border-[#1a5a4c80] xl:block " />
+        <div className="col-start-8 row-span-2 hidden h-full w-px place-self-center justify-self-center bg-[#1a5a4c80] xl:block " />
 
-        <div className="col-start-2 font-IBMPlexSans text-[14px] md:col-start-3  md:row-start-5 md:mb-5 xl:col-start-9 xl:row-start-2 xl:self-end">
-          <a href="#">Галерея</a>
+        <div className="col-start-2 mb-5 font-IBMPlexSans text-[14px] md:col-start-3  md:row-start-5  xl:col-start-9 xl:row-start-1 xl:self-end">
+          <a href="#gallery">Галерея</a>
         </div>
-        <div className="col-start-3 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-5 md:mb-5 xl:col-start-11 xl:row-start-2 xl:self-end">
-          <a href="#">Про Нас</a>
+        <div className="col-start-3 mb-5 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-5 xl:col-start-11 xl:row-start-1 xl:self-end">
+          <a href="#about-us">Про Нас</a>
         </div>
-        <div className="col-start-2 row-start-2 font-IBMPlexSans text-[14px] md:col-span-2 md:col-start-3 md:row-start-6 xl:col-start-9 xl:row-start-3">
-          <a href="#"> Виставки та події</a>
+        <div className="col-start-2 font-IBMPlexSans text-[14px] md:col-span-2 md:col-start-3 md:row-start-6 xl:col-start-9 xl:row-start-2">
+          <a href="#events"> Виставки та події</a>
         </div>
-        <div className="col-start-3 row-start-2 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-6 xl:col-start-11 xl:row-start-3">
-          <a href="#">Контакти</a>
+        <div className="col-start-3 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-6 xl:col-start-11 xl:row-start-2">
+          <a href="#contacts">Контакти</a>
         </div>
 
-        <hr className="col-start-2 col-end-4 my-[40px] border-white xl:col-start-7" />
+        <hr className="col-start-2 col-end-4 my-[40px] border-white md:my-[60px] xl:col-start-7" />
       </GridContainer>
 
       <GridContainer>
@@ -86,7 +102,7 @@ export const Footer = () => {
           Designed by Zhyriada Marina
         </p>
 
-        <p className="col-span-3 col-start-2 row-start-1 my-1 font-IBMPlexSans text-[12px] font-light">
+        <p className="col-span-2 col-start-2 my-1 text-center font-IBMPlexSans text-[12px] font-light ">
           Copyright © 2019. All Rights Reserved.
         </p>
       </GridContainer>

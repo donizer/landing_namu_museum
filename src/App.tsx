@@ -49,7 +49,7 @@ function App() {
         <button
           className={`${
             isWindowScrolled ? '' : 'hidden'
-          } fixed bottom-5 right-5 z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border-[1px] border-dark-green bg-white`}
+          } fixed bottom-5 right-5 z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border-[1px] border-dark-green bg-white md:bottom-[40px] md:right-[40px] xl:bottom-[55px] xl:right-[55px]`}
           onClick={scrollToTop}
         >
           <img className="scale-125" src={arrowUpIcon} alt="arrowUpIcon" />
@@ -58,13 +58,16 @@ function App() {
         <Header />
 
         <GridContainer>
-          <hr className="col-span-full my-[25px] border-white xl:my-[100px]" />
+          <hr className="col-span-full my-[25px] border-white md:my-[44px] xl:my-[100px]" />
 
-          <h2 className="col-span-full text-center font-montserrat text-4xl font-bold leading-[100%] md:col-start-2 md:text-left xl:text-5xl">
+          <h2
+            id="events"
+            className="col-span-full text-center font-montserrat text-4xl font-bold leading-[100%] md:col-start-2 md:text-left md:text-5xl xl:text-5xl"
+          >
             Актуальні <br className="md:hidden" /> події
           </h2>
 
-          <hr className="col-span-full border-white xl:my-[28px]" />
+          <hr className="col-span-full my-[20px] border-white md:my-[24px] xl:my-[28px]" />
 
           <GalleryItem
             imgUrl={landscape}
@@ -76,7 +79,7 @@ function App() {
             років.
           </GalleryItem>
 
-          <hr className="col-span-full border-white xl:my-[52px]" />
+          <hr className="col-span-full my-[30px] border-white md:my-[32px] xl:my-[52px]" />
 
           <GalleryItem
             imgUrl={birdImage}
@@ -88,13 +91,16 @@ function App() {
             ретроспективну ювілейну виставку «І спогади і мрії».
           </GalleryItem>
 
-          <hr className="col-span-full border-white xl:my-[52px]" />
+          <hr className="col-span-full my-[30px] border-white md:my-[56px] xl:my-[52px]" />
 
           <PromoItem imgUrl={redSun} />
 
-          <hr className="col-span-full my-[25px] border-white xl:my-[100px]" />
+          <hr className="col-span-full my-[50px] border-white xl:my-[100px]" />
 
-          <h2 className="col-start-2 col-end-4 text-center font-montserrat text-4xl font-bold leading-[100%] md:col-end-8 md:text-left xl:text-5xl">
+          <h2
+            id="gallery"
+            className="col-start-2 col-end-4 text-center font-montserrat text-4xl font-bold leading-[100%] md:col-end-8 md:text-left md:text-5xl xl:text-5xl"
+          >
             Галерея
           </h2>
 
@@ -105,6 +111,8 @@ function App() {
           <hr className="col-span-full my-[35px] border-white xl:my-[100px]" />
 
           <Subscribe />
+
+          <hr className="col-span-full my-[25px] border-white" />
         </GridContainer>
 
         <Footer />

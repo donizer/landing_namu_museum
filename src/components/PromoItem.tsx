@@ -11,8 +11,8 @@ export const PromoItem: React.FC<Props> = ({ imgUrl }) => {
           src={imgUrl}
           alt=""
         />
-        <div className="relative bottom-10 m-auto grid h-[140px] grid-cols-2 border-b-2 border-[#1a5a4c19] bg-white md:bottom-20 md:h-[204px] md:px-[100px] md:py-6 xl:w-[570px]">
-          <div className="col-span-full flex justify-between px-5 py-4 xl:px-0">
+        <div className="relative bottom-[57px] m-auto grid h-[140px] w-[280px] grid-cols-2 border-b-2 border-[#1a5a4c40] bg-white md:bottom-[84px] md:h-[204px] md:w-[570px] md:px-[55px] md:py-6 xl:w-[570px]">
+          <div className="col-span-full flex justify-between px-5 py-4 md:px-0">
             <span className="relative font-IBMPlexSans text-base font-medium uppercase text-sub-text">
               лекція
             </span>

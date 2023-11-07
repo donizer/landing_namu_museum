@@ -17,6 +17,15 @@ export const AppContextProvider: React.FC<Props> = ({ children }) => {
     setIsMenuOpen(prev => !prev);
   };
 
+  const turnOnMenu = () => {
+    setIsMenuOpen(true);
+  };
+  
+  const turnOffMenu = () => {
+    setIsMenuOpen(false);
+  };
+  
+
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions());
@@ -43,6 +52,8 @@ export const AppContextProvider: React.FC<Props> = ({ children }) => {
     isMenuOpen,
     setIsMenuOpen,
     toggleMenu,
+    turnOnMenu,
+    turnOffMenu,
     isWindowScrolled,
     setIsWindowScrolled,
     windowDimensions,

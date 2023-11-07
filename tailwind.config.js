@@ -28,9 +28,9 @@ export default {
       gridTemplateColumns: {
         menuMobile: '100px 100px',
         menuDesktop: '170px 170px',
-        mobile: 'minmax(0, 0px) repeat(2, minmax(0, 1fr)) minmax(0, 0px)',
-        tablet: 'minmax(0, 0px) repeat(6, minmax(0, 1fr)) minmax(0, 0px)',
-        desktop: 'minmax(0, 0px) repeat(12, minmax(0, 1fr)) minmax(0, 0px)',
+        mobile: '0 repeat(2, minmax(0, 1fr)) 0',
+        tablet: 'minmax(0, 9px) repeat(6, minmax(0, 1fr)) minmax(0, 9px)',
+        desktop: 'minmax(0, 25px) repeat(12, minmax(0, 1fr)) minmax(0, 25px)',
       },
     },
   },

@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 
 type Props = {
   images: string[];
   itemWidth?: number;
   itemHeight?: number;
+  gap?: number;
   step?: number;
   frameSize?: number;
   animationDuration?: number;
@@ -15,13 +16,15 @@ const Carousel: React.FC<Props> = ({
   images,
   itemWidth = 130,
   itemHeight = 231,
+  gap = 0,
   step = 3,
   frameSize = 3,
   animationDuration = 1000,
   infinite = false,
 }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
   const lastFramedIndex = images.length - frameSize;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [transformValue, setTransformValue] = useState(activeIndex * itemWidth);
 
   const updateIndex = (newIndex: number) => {
     let modifiedIndex = newIndex;
@@ -44,39 +47,56 @@ const Carousel: React.FC<Props> = ({
     onSwipedRight: () => updateIndex(activeIndex - step),
   });
 
+  useEffect(() => {
+    const calc =
+      activeIndex === 0
+        ? activeIndex * itemWidth
+        : activeIndex * itemWidth + gap * activeIndex;
+
+    setTransformValue(calc);
+
+    console.log(
+      `translateX(-${calc}px)`,
+      activeIndex * itemWidth,
+      activeIndex * itemWidth + gap * activeIndex,
+    );
+  }, [activeIndex, gap, images.length, itemWidth]);
+
   return (
     <div
       {...handlers}
-      className="col-span-full overflow-hidden "
+      className="col-span-full overflow-x-hidden"
       style={{ width: itemWidth * frameSize }}
     >
       <ul
-        className="relative left-0 right-0 inline-flex"
+        className="relative left-0 right-0 inline-flex gap-x-[16px] md:gap-x-5"
         style={{
           transitionDuration: `${animationDuration}ms`,
-          transform: `translateX(-${activeIndex * itemWidth}px)`,
+          transform: `translateX(-${transformValue}px)`,
         }}
       >
-        {images.map(imageUrl => (
-          <li
-            className="inline-flex flex-shrink-0 flex-grow items-center justify-center"
-            key={imageUrl}
-          >
-            <img
-              className="object-cover"
-              style={{ width: itemWidth, height: itemHeight }}
-              src={imageUrl}
-              alt={imageUrl}
-              width={itemWidth}
-            />
-          </li>
-        ))}
+        {images.map((imageUrl, i) => {
+          return (
+            <li
+              className="inline-flex flex-shrink-0 flex-grow items-center justify-center transition-all"
+              key={i}
+            >
+              <img
+                className="scale-x-[-1] select-none object-cover"
+                style={{ width: itemWidth, height: itemHeight }}
+                src={imageUrl}
+                alt={imageUrl}
+                width={itemWidth}
+              />
+            </li>
+          );
+        })}
       </ul>
       <div className="flex w-full justify-center gap-4">
-        {images.map((_, i) => {
+        {images.slice(frameSize - 1).map((_, i) => {
           return (
             <div
-              key={images[i]}
+              key={i}
               className={`my-5 h-[9px] w-[9px] rounded-full ${
                 i === activeIndex ? 'bg-[#1A5A4C]' : 'bg-[#E0E0E0]'
               }`}

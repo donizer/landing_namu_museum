@@ -4,6 +4,8 @@ export type AppContextType = {
   isMenuOpen: boolean;
   setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
   toggleMenu: () => void;
+  turnOnMenu: () => void;
+  turnOffMenu: () => void;
   isWindowScrolled: boolean;
   setIsWindowScrolled: React.Dispatch<React.SetStateAction<boolean>>;
   windowDimensions: {
@@ -22,6 +24,8 @@ const defaultValues = {
   isMenuOpen: false,
   setIsMenuOpen: () => null,
   toggleMenu: () => null,
+  turnOnMenu: () => null,
+  turnOffMenu: () => null,
   isWindowScrolled: false,
   setIsWindowScrolled: () => null,
   windowDimensions: { width: 0, height: 0 },
