@@ -54,12 +54,6 @@ const Carousel: React.FC<Props> = ({
         : activeIndex * itemWidth + gap * activeIndex;
 
     setTransformValue(calc);
-
-    console.log(
-      `translateX(-${calc}px)`,
-      activeIndex * itemWidth,
-      activeIndex * itemWidth + gap * activeIndex,
-    );
   }, [activeIndex, gap, images.length, itemWidth]);
 
   return (
