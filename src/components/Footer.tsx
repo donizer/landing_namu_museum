@@ -102,7 +102,7 @@ export const Footer = () => {
           Designed by Zhyriada Marina
         </p>
 
-        <p className="col-span-2 col-start-2 my-1 text-center font-IBMPlexSans text-[12px] font-light ">
+        <p className="col-span-2 col-start-2 my-1 text-center font-IBMPlexSans text-[12px] font-light xl:col-span-3">
           Copyright © 2019. All Rights Reserved.
         </p>
       </GridContainer>
