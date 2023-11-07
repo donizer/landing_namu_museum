@@ -2,7 +2,7 @@ import { GridContainer } from './GridContainer';
 
 import facebookIco from '../assets/facebook-letter-logo.svg';
 import instagramIco from '../assets/instagram (3).svg';
-import { StylishLink } from './NavAnchor';
+import { StylishLink } from './StylishLink';
 
 export const Footer = () => {
   return (
@@ -69,7 +69,12 @@ export const Footer = () => {
         </div>
 
         <div className="col-start-3 row-start-3 font-IBMPlexSans text-[14px] leading-[150%] md:col-span-2 md:col-start-5 md:row-start-2 xl:col-start-6">
-          вул. М. Грушевського, 6; Київ, 01001
+          <StylishLink
+            newWindow
+            href="https://maps.app.goo.gl/ATmt4KPzmmUjcuLW7"
+          >
+            вул. М. Грушевського, 6; Київ, 01001
+          </StylishLink>
           <br />
           <StylishLink href="tel:+380442781357">
             тел. +38 (044) <br className="md:hidden" /> 278-13-57
