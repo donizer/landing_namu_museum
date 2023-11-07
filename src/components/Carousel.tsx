@@ -86,16 +86,20 @@ const Carousel: React.FC<Props> = ({
           );
         })}
       </ul>
-      <div className="flex w-full justify-center gap-4">
+      <div className="flex w-full justify-center gap-2">
         {images.slice(frameSize - 1).map((_, i) => {
           return (
             <div
               key={i}
-              onClick={() => setActiveIndex(i)}
-              className={`my-5 h-[9px] w-[9px] rounded-full ${
-                i === activeIndex ? 'bg-[#1A5A4C]' : 'bg-[#E0E0E0]'
-              }`}
-            />
+              className="my-4 grid h-5 w-5 shrink-0 content-center justify-center"
+            >
+              <div
+                onClick={() => setActiveIndex(i)}
+                className={` h-[9px] w-[9px] rounded-full ${
+                  i === activeIndex ? 'bg-[#1A5A4C]' : 'bg-[#E0E0E0]'
+                }`}
+              />
+            </div>
           );
         })}
       </div>
