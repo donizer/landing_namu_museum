@@ -49,10 +49,14 @@ function App() {
         <button
           className={`${
             isWindowScrolled ? '' : 'hidden'
-          } fixed bottom-5 right-5 z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border-[1px] border-dark-green bg-white md:bottom-[40px] md:right-[40px] xl:bottom-[55px] xl:right-[55px]`}
+          } group fixed bottom-5 right-5 z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full border-[1px] border-dark-green bg-white hover:bg-dark-green md:bottom-[40px] md:right-[40px] xl:bottom-[55px] xl:right-[55px]`}
           onClick={scrollToTop}
         >
-          <img className="scale-125" src={arrowUpIcon} alt="arrowUpIcon" />
+          <img
+            className="scale-125 group-hover:invert"
+            src={arrowUpIcon}
+            alt="arrowUpIcon"
+          />
         </button>
 
         <Header />
