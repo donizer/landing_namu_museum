@@ -5,17 +5,21 @@ const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export const Subscribe = () => {
   const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
 
   const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
-    if (!email || !emailRegEx.test(email)) {
+    if (!email.trim() || !emailRegEx.test(email)) {
       e.preventDefault();
-      console.log(!email, !emailRegEx.test(email));
+      setError('Введіть коректний E-mail');
       return;
     }
+
+    setError('');
+    setEmail('');
   };
 
   return (
@@ -23,26 +27,36 @@ export const Subscribe = () => {
       <div className="relative z-10 col-span-full flex h-[386px] flex-col items-center justify-center bg-[#000000d0] md:h-[380px] xl:h-[550px]">
         <h3
           id="about-us"
-          className="my-5 font-montserrat text-3xl font-bold text-white"
+          className="my-5 font-montserrat text-3xl font-bold leading-[100%] text-white md:my-4 md:text-5xl"
         >
           Підписка
         </h3>
 
-        <p className="mb-[54px] text-center text-[18px] text-white">
+        <p className="mb-[54px] w-[280px] text-center text-[18px] leading-[100%] text-white md:w-[460px] md:text-left">
           Бути в курсі всіх актуальних <br className="md:hidden" /> подій та
           останніх новин.
         </p>
 
-        <form onSubmit={handleForm} className="flex md:gap-4">
+        <form
+          onSubmit={handleForm}
+          className="relative flex md:w-[460px] md:gap-4"
+        >
+          <p
+            className={`md:text-l absolute -top-6 w-[280px] text-left text-sm text-red-700 md:w-[460px] ${
+              error ? 'visible' : 'invisible'
+            }`}
+          >
+            {error}
+          </p>
           <input
-            className="box-border w-full py-3 pl-6 font-IBMPlexSans text-base md:w-[374px]"
+            className="box-border w-full py-3 pl-6 font-IBMPlexSans text-base md:h-[70px] md:w-[374px]"
             placeholder="E-mail"
             value={email}
             onChange={handleChange}
           />
-          <button>
+          <button className="h-fit w-fit shrink-0">
             <img
-              className="h-[50px] w-[50px] bg-[#0eb5d8] p-[14px] invert md:h-[70px] md:w-[70px] md:p-[20px]"
+              className="bg-[#0eb5d8] p-[14px] invert transition-all hover:p-[12px] md:h-[70px] md:w-[70px] md:p-[20px] md:hover:p-[12px]"
               src={arrowIcon}
               alt="arrowIcon"
             />

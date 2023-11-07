@@ -24,13 +24,17 @@ export default {
       backgroundSize: {
         '50%': '50%',
       },
-
       gridTemplateColumns: {
         menuMobile: '100px 100px',
         menuDesktop: '170px 170px',
         mobile: '0 repeat(2, minmax(0, 1fr)) 0',
         tablet: 'minmax(0, 9px) repeat(6, minmax(0, 1fr)) minmax(0, 9px)',
         desktop: 'minmax(0, 25px) repeat(12, minmax(0, 1fr)) minmax(0, 25px)',
+        wideDesktop:
+          'minmax(0, 3fr) repeat(12, minmax(0, 1fr)) minmax(0, 3fr)',
+      },
+      screens: {
+        '2xl': { min: '1440px' },
       },
     },
   },

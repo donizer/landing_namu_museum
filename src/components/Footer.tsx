@@ -2,6 +2,7 @@ import { GridContainer } from './GridContainer';
 
 import facebookIco from '../assets/facebook-letter-logo.svg';
 import instagramIco from '../assets/instagram (3).svg';
+import { NavAnchor } from './NavAnchor';
 
 export const Footer = () => {
   return (
@@ -70,11 +71,15 @@ export const Footer = () => {
         <div className="col-start-3 row-start-3 font-IBMPlexSans text-[14px] leading-[150%] md:col-span-2 md:col-start-5 md:row-start-2 xl:col-start-6">
           вул. М. Грушевського, 6; Київ, 01001
           <br />
-          тел. +38 (044) <br className="md:hidden" /> 278-13-57
+          <a href="tel:+380442781357">
+            тел. +38 (044) <br className="md:hidden" /> 278-13-57
+          </a>
           <br />
-          факс +38 (044) <br className="md:hidden xl:inline" /> 278-74-54
+          <a href="fax:+380442787454">
+            факс +38 (044) <br className="md:hidden xl:inline" /> 278-74-54
+          </a>
           <br />
-          e-mail: info@namu.kiev.ua
+          <a href="mailto:info@namu.kiev.ua">e-mail: info@namu.kiev.ua</a>
         </div>
 
         <hr className="col-start-2 col-end-4 row-start-4 my-[40px] border-[#1a5a4c80] md:col-start-3 md:col-end-7 md:my-[64px] xl:hidden" />
@@ -82,16 +87,17 @@ export const Footer = () => {
         <div className="col-start-8 row-span-2 hidden h-full w-px place-self-center justify-self-center bg-[#1a5a4c80] xl:block " />
 
         <div className="col-start-2 mb-5 font-IBMPlexSans text-[14px] md:col-start-3  md:row-start-5  xl:col-start-9 xl:row-start-1 xl:self-end">
-          <a href="#gallery">Галерея</a>
+          <NavAnchor href="#gallery">Галерея</NavAnchor>
         </div>
+
         <div className="col-start-3 mb-5 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-5 xl:col-start-11 xl:row-start-1 xl:self-end">
-          <a href="#about-us">Про Нас</a>
+          <NavAnchor href="#about-us">Про Нас</NavAnchor>
         </div>
         <div className="col-start-2 font-IBMPlexSans text-[14px] md:col-span-2 md:col-start-3 md:row-start-6 xl:col-start-9 xl:row-start-2">
-          <a href="#events"> Виставки та події</a>
+          <NavAnchor href="#events">Виставки та події</NavAnchor>
         </div>
         <div className="col-start-3 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-6 xl:col-start-11 xl:row-start-2">
-          <a href="#contacts">Контакти</a>
+          <NavAnchor href="#contacts">Контакти</NavAnchor>
         </div>
 
         <hr className="col-start-2 col-end-4 my-[40px] border-white md:my-[60px] xl:col-start-7" />

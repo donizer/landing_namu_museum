@@ -34,7 +34,7 @@ export const Header = () => {
       </div>
 
       <img
-        className="pointer-events-none col-span-full w-full select-none md:col-start-5 xl:col-start-7"
+        className="pointer-events-none col-span-full w-full select-none object-cover object-bottom md:col-start-5 xl:col-start-7 2xl:max-h-[655px]"
         src={museum}
         alt=""
       />
@@ -45,16 +45,21 @@ export const Header = () => {
         <h1 className=" text-center font-montserrat text-[45px] font-bold leading-[100%] md:text-left md:text-[54px] xl:text-7xl">
           ХУДОЖНІЙ МУЗЕЙ
         </h1>
-        <button className="flex w-[280px] md:w-[270px] md:place-self-start xl:place-self-end">
-          <div className="h-[50px] border-[1px] border-dark-green px-20 py-3 font-IBMPlexSans text-base uppercase md:h-[70px] md:py-5 xl:w-[200px]">
+
+        <a
+          href="#events"
+          className="flex w-[280px] justify-self-center bg-white transition-all hover:bg-dark-green hover:text-white md:w-[270px] md:place-self-start xl:place-self-end"
+        >
+          <div className="h-[50px] border-[1px] border-dark-green px-20 py-3 font-IBMPlexSans text-base  uppercase md:h-[70px] md:py-5 xl:w-[200px]">
             Квитки
           </div>
+
           <img
-            className="h-[50px] w-[50px] bg-dark-green p-3 md:h-[70px] md:w-[70px] md:p-6 "
+            className="h-[50px] w-[50px] bg-dark-green p-3 transition-all hover:p-[12px] md:h-[70px] md:w-[70px] md:p-[20px] "
             src={arrowIcon}
             alt="arrowIcon"
           />
-        </button>
+        </a>
       </div>
     </GridContainer>
   );
