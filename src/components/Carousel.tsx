@@ -97,10 +97,11 @@ const Carousel: React.FC<Props> = ({
           return (
             <div
               key={i}
+              onClick={() => setActiveIndex(i)}
               className={`my-5 h-[9px] w-[9px] rounded-full ${
                 i === activeIndex ? 'bg-[#1A5A4C]' : 'bg-[#E0E0E0]'
               }`}
-            ></div>
+            />
           );
         })}
       </div>

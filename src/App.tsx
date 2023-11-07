@@ -33,7 +33,6 @@ function App() {
 
     if (isMenuOpen) {
       body.style.overflow = 'hidden';
-      body.style.overflowY = 'scroll';
       body.style.position = 'fixed';
     } else {
       body.style.overflow = 'auto';

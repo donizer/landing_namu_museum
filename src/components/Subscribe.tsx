@@ -9,6 +9,7 @@ export const Subscribe = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+    setError('');
   };
 
   const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,7 +19,6 @@ export const Subscribe = () => {
       return;
     }
 
-    setError('');
     setEmail('');
   };
 
