@@ -1,6 +1,6 @@
 # NAMU Landing page
 
-This landing page was designed for NAMU.
+This landing page was created by NAMU design.
 
 I used React, Tailwind. And Vite as a build tool
 
