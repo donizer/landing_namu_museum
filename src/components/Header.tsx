@@ -7,13 +7,13 @@ import arrowIcon from '../assets/baseline-keyboard_arrow_right-24px.svg';
 import museum from '../assets/Natsionalnij-hudozhnij-muzej-Ukrayini-Kiyiv-10-1800x1200.png';
 
 export const Header = () => {
-  const { toggleMenu } = useContext(appContext);
+  const { turnOnMenu } = useContext(appContext);
 
   return (
     <GridContainer id="home">
       <button
         className="absolute left-6 top-7 z-10 h-fit w-fit md:left-8 md:top-9"
-        onClick={toggleMenu}
+        onClick={turnOnMenu}
       >
         <img src={burgerButton} alt="burgerButton" />
       </button>
@@ -48,14 +48,14 @@ export const Header = () => {
 
         <a
           href="#events"
-          className="flex w-[280px] justify-self-center bg-white transition-all hover:bg-dark-green hover:text-white md:w-[270px] md:place-self-start xl:place-self-end"
+          className="flex w-[280px] justify-self-center bg-white transition-all duration-200 hover:bg-dark-green hover:text-white md:w-[270px] md:place-self-start xl:place-self-end"
         >
           <div className="h-[50px] border-[1px] border-dark-green px-20 py-3 font-IBMPlexSans text-base  uppercase md:h-[70px] md:py-5 xl:w-[200px]">
             Квитки
           </div>
 
           <img
-            className="h-[50px] w-[50px] bg-dark-green p-3 transition-all hover:p-[12px] md:h-[70px] md:w-[70px] md:p-[20px] "
+            className="h-[50px] w-[50px] bg-dark-green p-3 transition-all duration-200 hover:p-[12px] md:h-[70px] md:w-[70px] md:p-[20px] "
             src={arrowIcon}
             alt="arrowIcon"
           />

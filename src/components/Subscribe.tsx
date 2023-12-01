@@ -49,14 +49,14 @@ export const Subscribe = () => {
             {error}
           </p>
           <input
-            className="box-border w-full py-3 pl-6 font-IBMPlexSans text-base md:h-[70px] md:w-[374px]"
+            className="box-border w-full py-3 pl-6 font-IBMPlexSans text-base outline-none md:h-[70px] md:w-[374px]"
             placeholder="E-mail"
             value={email}
             onChange={handleChange}
           />
           <button className="h-fit w-fit shrink-0">
             <img
-              className="bg-[#0eb5d8] p-[14px] invert transition-all hover:p-[12px] md:h-[70px] md:w-[70px] md:p-[20px] md:hover:p-[12px]"
+              className="bg-[#0eb5d8] p-[14px] invert transition-all duration-200 hover:p-[12px] md:h-[70px] md:w-[70px] md:p-[20px] md:hover:p-[12px]"
               src={arrowIcon}
               alt="arrowIcon"
             />

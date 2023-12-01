@@ -11,25 +11,24 @@ export const ModalMenu = () => {
     <div
       className={`fixed ${
         isMenuOpen ? 'bg-[#00000080]' : 'pointer-events-none bg-[#00000000]'
-      } z-20 h-screen w-screen transition-all`}
+      } z-20 h-screen w-screen transition-all duration-200 xl:duration-300`}
       onClick={turnOffMenu}
     >
       <div
-        className={`h-auto] absolute left-0 right-0 flex justify-center bg-[#1A5A4C] transition-all md:h-[225px] xl:h-[233px] ${
+        className={`h-auto] absolute left-0 right-0 flex justify-center bg-[#1A5A4C] transition-all duration-200 md:h-[225px] xl:h-[233px] xl:duration-300 ${
           isMenuOpen ? 'top-[0%]' : 'top-[-100%]'
         }`}
         onClick={e => e.stopPropagation()}
       >
         <GridContainer>
-          <button onClick={turnOffMenu}>
-            <img
-              className="absolute left-6 top-7 z-10 md:left-8 md:top-9"
-              src={closeBurger}
-              alt="burgerButton"
-            />
+          <button
+            className="absolute left-6 top-7 z-10 flex h-8 w-8 items-center justify-center md:left-8 md:top-9"
+            onClick={turnOffMenu}
+          >
+            <img className="" src={closeBurger} alt="burgerButton" />
           </button>
 
-          <div className="grid-cols-menuMobile md:grid-cols-menuTablet xl:grid-cols-menuDesktop col-start-2 col-end-4 my-6 grid gap-x-5 gap-y-6 pl-[52px] font-IBMPlexSans text-base font-medium text-white md:col-end-4 md:pl-[64px] xl:pl-[126px] xl:text-[22px]">
+          <div className="md:grid-cols-menuTablet col-start-2 col-end-4 my-6 grid grid-cols-menuMobile gap-x-5 gap-y-6 pl-[52px] font-IBMPlexSans text-base font-medium text-white md:col-end-4 md:pl-[64px] xl:grid-cols-menuDesktop xl:pl-[126px] xl:text-[22px]">
             <a onClick={turnOffMenu} href="#gallery">
               Галерея
             </a>

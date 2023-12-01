@@ -33,25 +33,25 @@ export const Gallery = () => {
         </div>
       ) : (
         <div className="col-start-2 col-end-[14] grid grid-cols-12 gap-[30px] ">
-          <div className="col-span-4 transition-all hover:scale-105">
+          <div className="col-span-4 transition-all duration-200 hover:scale-105">
             <img
               className="pointer-events-none h-full scale-x-[-1] select-none object-cover"
               src={img3}
             />
           </div>
-          <div className="col-span-8 transition-all hover:scale-105">
+          <div className="col-span-8 transition-all duration-200 hover:scale-105">
             <img
               className="pointer-events-none w-full scale-x-[-1] select-none"
               src={img2}
             />
           </div>
-          <div className="col-span-8 transition-all hover:scale-105">
+          <div className="col-span-8 transition-all duration-200 hover:scale-105">
             <img
               className="row-start pointer-events-none h-[360px] w-full scale-x-[-1] select-none object-cover"
               src={img1}
             />
           </div>
-          <div className="col-span-4 transition-all hover:scale-105">
+          <div className="col-span-4 transition-all duration-200 hover:scale-105">
             <img
               className="pointer-events-none h-full scale-x-[-1] select-none object-cover"
               src={img4}

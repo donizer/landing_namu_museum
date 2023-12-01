@@ -10,7 +10,7 @@ export const StylishLink: React.FC<Props> = ({ children, href, newWindow }) => {
   return (
     <a
       target={`${newWindow ? '_blank' : ''}`}
-      className="bg-white transition-all hover:bg-dark-green hover:text-white"
+      className="bg-white transition-all duration-200 hover:bg-dark-green hover:text-white"
       href={href}
     >
       {children}

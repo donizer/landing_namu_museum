@@ -43,7 +43,7 @@ export const GalleryItem: React.FC<Props> = ({
   return (
     <>
       <div className="col-start-2 col-end-4 md:col-end-8 xl:col-end-9">
-        <div className="relative h-[210px] transition-all md:h-[520px] md:hover:scale-105">
+        <div className="relative h-[210px] transition-all duration-200 md:h-[520px] md:hover:scale-105">
           <img
             className="pointer-events-none absolute top-0 z-10 block h-[210px] w-full object-cover md:h-[520px]"
             src={imgUrl}

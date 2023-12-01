@@ -72,7 +72,7 @@ const Carousel: React.FC<Props> = ({
         {images.map((imageUrl, i) => {
           return (
             <li
-              className="inline-flex flex-shrink-0 flex-grow items-center justify-center transition-all"
+              className="inline-flex flex-shrink-0 flex-grow items-center justify-center transition-all duration-200"
               key={i}
             >
               <img
