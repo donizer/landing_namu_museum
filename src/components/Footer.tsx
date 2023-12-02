@@ -100,7 +100,7 @@ export const Footer = () => {
         <div className="col-start-3 mb-5 font-IBMPlexSans text-[14px] md:col-start-5 md:row-start-5 xl:col-start-11 xl:row-start-1 xl:self-end">
           <StylishLink href="#about-us">Про Нас</StylishLink>
         </div>
-        
+
         <div className="col-start-2 font-IBMPlexSans text-[14px] md:col-span-2 md:col-start-3 md:row-start-6 xl:col-start-9 xl:row-start-2">
           <StylishLink href="#events">Виставки та події</StylishLink>
         </div>
